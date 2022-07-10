@@ -17,7 +17,7 @@ const Navbar = () => {
             <a href="https://github.com/">GITHUB</a>
           </li>
           <li>
-            <a href="">LOGOUT</a>
+            <a href="login">LOGOUT</a>
           </li>
         </ul>
       </div>

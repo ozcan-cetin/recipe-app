@@ -1,8 +1,12 @@
-import React from 'react'
+import Logincontainer, {Input, Button} from "./Style"
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <Logincontainer>
+      <Input type="text" placeholder='usenname' required />
+      <Input type="password" placeholder='password' required />
+      <Button type='submit'>LOGIN</Button>
+    </Logincontainer>
   )
 }
 

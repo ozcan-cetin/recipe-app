@@ -1,8 +1,14 @@
 import React from 'react'
+import {Recipe} from "./Style"
 
-const RecipeCard = () => {
+const RecipeCard = ({recipe}) => {
+  const{image, calories, dishType}=recipe
+  console.log(image);
   return (
-    <div>RecipeCard</div>
+    <Recipe>
+      <h3>{recipe.label}</h3>
+      <img src={recipe.image} alt={recipe.label} />
+    </Recipe>
   )
 }
 
