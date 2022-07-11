@@ -12,7 +12,8 @@ const AppRouter = () => {
       <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Login/>}/>
+        <Route path='home' element={<Home/>}/>
         <Route path='about' element={<About/>}/>
         <Route path='details' element={<Details/>}/>
         <Route path='login' element={<Login/>}/>

@@ -8,10 +8,10 @@ const Details = () => {
   const recipe = location.state;
 
   const {totalNutrients}=recipe;
-  console.log(totalNutrients)
+  // console.log(totalNutrients)
 
   const{CA:calc, CHOCDF:carb, CHOLE:chol, ENERC_KCAL:kcal, FAT:fat, PROCNT:prot} = totalNutrients;
-  console.log(calc.quantity);
+  // console.log(calc.quantity);
   return (
     <DetailsContainer>
       <div>

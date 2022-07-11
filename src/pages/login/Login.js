@@ -1,12 +1,26 @@
 import Logincontainer, {Input, Button} from "./Style"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 const Login = () => {
+  const [user, setUser] = useState("")
+  const [password, setPassword] = useState("")
+  const navigate = useNavigate()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sessionStorage.setItem("user",user);
+    sessionStorage.setItem("password",password);
+    navigate("/home")
+  }
   return (
-    <Logincontainer>
-      <Input type="text" placeholder='usenname' required />
-      <Input type="password" placeholder='password' required />
+    <form onSubmit={handleSubmit}>
+        <Logincontainer>
+      <Input type="text" value={user} placeholder='username' required onChange={(e)=>setUser(e.target.value)}/>
+      <Input type="password" value={password} placeholder='password' required onChange={(e)=>setPassword(e.target.value)}/>
       <Button type='submit'>LOGIN</Button>
     </Logincontainer>
+      </form>
   )
 }
 

@@ -19,7 +19,7 @@ const Home = () => {
   const getRecipes = async () => {
     try {
       const {data} = await axios.get(url);
-    //   console.log(data);
+      console.log(data);
     setRecipes(data.hits)
     setMealType("")
     setQuery("")
