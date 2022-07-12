@@ -7,7 +7,7 @@ const Details = () => {
   const location = useLocation();
   const recipe = location.state;
 
-  const {totalNutrients}=recipe;
+  const {totalNutrients, ingredientLines:ingredients}=recipe;
   // console.log(totalNutrients)
 
   const{CA:calc, CHOCDF:carb, CHOLE:chol, ENERC_KCAL:kcal, FAT:fat, PROCNT:prot} = totalNutrients;
@@ -28,6 +28,9 @@ const Details = () => {
           <h3>{carb.label} : {Math.round(carb.quantity)}</h3>
           <h3>{prot.label} : {Math.round(prot.quantity)}</h3>
           <h3>{chol.label} : {Math.round(chol.quantity)}</h3>
+        </Nutrients>
+        <Nutrients>
+       {ingredients.map((item)=><h3>{item}</h3>)}
         </Nutrients>
         <div>
       <img src={recipe.image} alt={recipe.label} />

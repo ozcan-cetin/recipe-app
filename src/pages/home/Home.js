@@ -31,20 +31,11 @@ const Home = () => {
     }
   };
 
-//   getRecipes()
-
-//   useEffect(() => {
-//     getRecipes();
-//   }, []);
 const handleClick=(e)=>{
     e.preventDefault();
     setLoading(true);
     getRecipes()
 }
-
-// useEffect(()=>{
-//   setStart(true)
-// },[])
 
   return <HomeBody>
   <h1>Food App</h1>

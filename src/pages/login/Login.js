@@ -13,8 +13,6 @@ const Login = () => {
     sessionStorage.setItem("user",user);
     sessionStorage.setItem("password",password);
     navigate("/home")
-    // setStart(true)
-    // navigate("../../components/navbar", {state:start})
   }
   return (
     <form onSubmit={handleSubmit}>
