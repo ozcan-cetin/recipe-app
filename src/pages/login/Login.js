@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 const Login = () => {
+  // const [start, setStart] = useState(false)
   const [user, setUser] = useState("")
   const [password, setPassword] = useState("")
   const navigate = useNavigate()
@@ -12,6 +13,8 @@ const Login = () => {
     sessionStorage.setItem("user",user);
     sessionStorage.setItem("password",password);
     navigate("/home")
+    // setStart(true)
+    // navigate("../../components/navbar", {state:start})
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -24,4 +27,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;

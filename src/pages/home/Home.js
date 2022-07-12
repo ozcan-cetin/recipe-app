@@ -4,16 +4,18 @@ import { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import Form from "../../components/header/Form";
 import RecipeCard from "./RecipeCard";
-import { Container } from "./Style";
+import { HomeBody, Container, FormContainer } from "./Style";
+import Navbar from "../../components/navbar/Navbar";
 
 
 const Home = () => {
+  // const [start, setStart] = useState(false)
   const id = "5d05c6be";
   const apiKey = "1617ae65599f186bcf6d2338f34746f7";
   const [recipes, setRecipes] = useState([])
   const [query, setQuery] = useState("");
-  const [mealType, setMealType] = useState("");
-  const [loading, setLoading] = useState(true)
+  const [mealType, setMealType] = useState("Breakfast");
+  const [loading, setLoading] = useState(false)
   const url = `https://api.edamam.com/search?q=${query}&app_id=${id}&app_key=${apiKey}&mealType=${mealType}`;
 
   const getRecipes = async () => {
@@ -36,17 +38,21 @@ const Home = () => {
 //   }, []);
 const handleClick=(e)=>{
     e.preventDefault();
-    setLoading(true)
+    setLoading(true);
     getRecipes()
 }
 
+// useEffect(()=>{
+//   setStart(true)
+// },[])
 
-  return <div>
+  return <HomeBody>
   <h1>Food App</h1>
   <form onSubmit={handleClick}>
-    <input type="text" name="query" value={query} onChange={(e)=>setQuery(e.target.value)} />
+    <FormContainer>
+       <input type="text" name="query" value={query} onChange={(e)=>setQuery(e.target.value)} />
         <select name="mealType" id="mealType" value={mealType} onChange={(e)=>setMealType(e.target.value)}>
-            <option value="">Choose Meal</option>
+            {/* <option value="">Choose Meal</option> */}
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
             <option value="Breakfast">Dinner</option>
@@ -54,6 +60,8 @@ const handleClick=(e)=>{
             <option value="Teatime">Teatime</option>
         </select>
         <button type="submit">Search</button>
+    </FormContainer>
+   
   </form>
   <Container>
     {loading ? <h1>Loading..</h1>
@@ -64,8 +72,7 @@ const handleClick=(e)=>{
     )
   })}
   </Container>
-  
-  </div>;
+  </HomeBody>;
 };
 
 export default Home;

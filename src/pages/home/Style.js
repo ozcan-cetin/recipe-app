@@ -1,5 +1,25 @@
 import styled from "styled-components";
 
+export const HomeBody = styled.div`
+background-color:lightblue;
+height: 100vh;
+`
+
+export const FormContainer = styled.div`
+display: flex;
+justify-content: center;
+gap: 1rem;
+input{
+    background-color: pink;
+    color:red;
+}
+select{
+    background-color: aqua;
+}
+button{
+    background-color: blueviolet;
+}
+`
 export const Container = styled.div`
 display: grid;
 grid-template-columns: repeat(5, 1fr);

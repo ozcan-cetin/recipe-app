@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Style from "./Style";
 import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+// const location = useLocation();
+// const start = location.state;
+const [start, setStart] = useState(true)
   return (
-    <Style>
+    <div>
+      {start && <Style>
       <div>
-        <h1>Özcan</h1>
+        <h1>RECIPE</h1>
       </div>
       <div>
         <ul>
@@ -21,7 +26,9 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-    </Style>
+    </Style>}
+    </div>
+   
   );
 };
 

@@ -7,6 +7,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   background-color:#E1F0DD ;
+  padding-left: 1rem;
   ul{
     
   }
@@ -14,6 +15,7 @@ const Nav = styled.nav`
     list-style-type: none;
     display: inline-block;
     margin: 0 1rem;
+    font-size: 1.2rem;
   }
   a{
     text-decoration: none;
