@@ -12,4 +12,7 @@ a{
     color: yellow;
     font-size: 1.5rem;
 }
+img{
+    width: 600px;
+}
 `

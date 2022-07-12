@@ -46,7 +46,7 @@ const handleClick=(e)=>{
             {/* <option value="">Choose Meal</option> */}
             <option value="Breakfast">Breakfast</option>
             <option value="Lunch">Lunch</option>
-            <option value="Breakfast">Dinner</option>
+            <option value="Dinner">Dinner</option>
             <option value="Snack">Snack</option>
             <option value="Teatime">Teatime</option>
         </select>
