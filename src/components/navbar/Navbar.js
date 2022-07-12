@@ -19,7 +19,7 @@ const [start, setStart] = useState(true)
             <NavLink to="about">ABOUT</NavLink>
           </li>
           <li>
-            <a href="https://github.com/">GITHUB</a>
+            <a href="https://github.com/ozcan-cetin">GITHUB</a>
           </li>
           <li>
           <NavLink to="login">LOGOUT</NavLink>

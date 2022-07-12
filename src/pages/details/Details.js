@@ -37,7 +37,9 @@ const Details = () => {
           <h3>{chol.label} : {Math.round(chol.quantity)}</h3>
         </Nutrients>
       </DetailsContainer2>
+      <div>
       <button onClick={()=>navigate("../home")}>HOME</button>
+      </div>
     </DetailsContainer>
   )
 }

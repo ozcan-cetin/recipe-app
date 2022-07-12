@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.div`
-background-color: blueviolet;
+/* background-color: blueviolet; */
 height: 100vh;
 display: flex;
 flex-direction: column;
@@ -14,5 +14,10 @@ a{
 }
 img{
     width: 600px;
+}
+@media(max-width:500px){
+    img{
+        width: 300px;
+    }
 }
 `

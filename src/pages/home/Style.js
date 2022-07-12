@@ -23,16 +23,24 @@ select{
 button{
     background-color: blueviolet;
 }
+@media(max-width:500px){
+flex-direction:column ;
+}
 `
 export const Container = styled.div`
 display: grid;
 grid-template-columns: repeat(5, 1fr);
 gap: 2rem;
 margin: 1rem;
-/* border: 1px solid red; */
-/* justify-content: center;
-align-items: center;
-flex-wrap: wrap; */ */
+@media(max-width:900px){
+    grid-template-columns: repeat(3, 1fr);
+}
+@media(max-width:769px){
+    grid-template-columns: repeat(2, 1fr);
+}
+@media(max-width:500px){
+    grid-template-columns: repeat(1, 1fr);
+}
 `
 
 export const Recipe = styled.div`
