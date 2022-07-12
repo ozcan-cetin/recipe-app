@@ -41,7 +41,7 @@ const handleClick=(e)=>{
   <h1>Food App</h1>
   <form onSubmit={handleClick}>
     <FormContainer>
-       <input type="text" name="query" value={query} onChange={(e)=>setQuery(e.target.value)} />
+       <input type="text" name="query" value={query} onChange={(e)=>setQuery(e.target.value)} placeholder="what do you want to eat?"/>
         <select name="mealType" id="mealType" value={mealType} onChange={(e)=>setMealType(e.target.value)}>
             {/* <option value="">Choose Meal</option> */}
             <option value="Breakfast">Breakfast</option>
