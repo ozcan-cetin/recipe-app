@@ -7,8 +7,10 @@ justify-content: center;
 /* align-items: center; */
 min-width: 300px;
 width: 30%;
+height: calc(100vh - 4rem);
 /* border: 1px solid red; */
 margin: auto;
+gap: 2rem;
 `
 
 export const Input = styled.input`

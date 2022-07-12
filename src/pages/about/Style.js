@@ -8,8 +8,8 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 a{
-    text-decoration: none;
-    color: red;
+    /* text-decoration: none; */
+    color: yellow;
     font-size: 1.5rem;
 }
 `

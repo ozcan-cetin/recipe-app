@@ -22,7 +22,7 @@ const [start, setStart] = useState(true)
             <a href="https://github.com/">GITHUB</a>
           </li>
           <li>
-            <a href="/">LOGOUT</a>
+          <NavLink to="login">LOGOUT</NavLink>
           </li>
         </ul>
       </div>

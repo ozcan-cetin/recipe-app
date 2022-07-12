@@ -4,6 +4,7 @@ import {DetailsContainer, DetailsContainer2, Nutrients} from "./Style"
 
 const Details = () => {
 
+  const navigate = useNavigate()
   const location = useLocation();
   const recipe = location.state;
 
@@ -18,6 +19,12 @@ const Details = () => {
       <h1>{recipe.label}</h1>
       </div>
       <DetailsContainer2>
+        <div>
+      <img src={recipe.image} alt={recipe.label} />
+        </div>
+        <Nutrients>
+       {ingredients.map((item)=><h3>{item}</h3>)}
+        </Nutrients>
         <Nutrients>
           <h3>{calc.label} : {Math.round(calc.quantity)}{calc.unit}</h3>
           <h3>{carb.label} : {Math.round(carb.quantity)}{carb.unit}</h3>
@@ -29,13 +36,8 @@ const Details = () => {
           <h3>{prot.label} : {Math.round(prot.quantity)}</h3>
           <h3>{chol.label} : {Math.round(chol.quantity)}</h3>
         </Nutrients>
-        <Nutrients>
-       {ingredients.map((item)=><h3>{item}</h3>)}
-        </Nutrients>
-        <div>
-      <img src={recipe.image} alt={recipe.label} />
-        </div>
       </DetailsContainer2>
+      <button onClick={()=>navigate("../home")}>HOME</button>
     </DetailsContainer>
   )
 }

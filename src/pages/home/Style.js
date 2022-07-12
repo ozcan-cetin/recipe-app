@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 export const HomeBody = styled.div`
 background-color:lightblue;
-height: 100vh;
+min-height: 100vh;
+padding: 1rem;
+h1{
+    text-align: center;
+}
 `
 
 export const FormContainer = styled.div`
@@ -33,8 +37,8 @@ flex-wrap: wrap; */ */
 
 export const Recipe = styled.div`
 display: grid;
-height: 300px;
-grid-template-rows:10% 80% 10% ;
+height: 350px;
+grid-template-rows:20% 70% 10% ;
 background-color:#00ADB5 ;
 /* border: 3px solid black; */
 justify-content: center;
