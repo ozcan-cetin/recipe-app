@@ -1,4 +1,4 @@
-import Logincontainer, {Input, Button} from "./Style"
+import Logincontainer, {Formcontainer, Input, Button} from "./Style"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
@@ -15,13 +15,13 @@ const Login = () => {
     navigate("/home")
   }
   return (
-    <form onSubmit={handleSubmit}>
         <Logincontainer>
+    <Formcontainer onSubmit={handleSubmit}>
       <Input type="text" value={user} placeholder='username' required onChange={(e)=>setUser(e.target.value)}/>
       <Input type="password" value={password} placeholder='password' required onChange={(e)=>setPassword(e.target.value)}/>
       <Button type='submit'>LOGIN</Button>
+      </Formcontainer>
     </Logincontainer>
-      </form>
   )
 }
 
